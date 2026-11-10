@@ -1,0 +1,109 @@
+/* ==========================================================
+   VoltioVerde Store - Estilos CSS Compilados (EA2)
+   Autor: Juan Esteban Franco Monsalve
+   ========================================================== */
+
+:root {
+  --vv-primario: #166534;
+  --vv-secundario: #0284c7;
+  --vv-oscuro: #1e293b;
+  --vv-fondo: #f8fafc;
+  --vv-sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--vv-fondo);
+  color: var(--vv-oscuro);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Navbar Flexbox */
+nav.navbar ul.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: var(--vv-oscuro);
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: var(--vv-primario);
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link:focus {
+  outline: 2px solid var(--vv-secundario);
+}
+
+/* Tarjetas y Modelo de Caja */
+.card {
+  border-radius: 12px;
+  box-shadow: var(--vv-sombra);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Personalización Bootstrap */
+.btn-primary {
+  background-color: var(--vv-primario);
+  border-color: var(--vv-primario);
+}
+
+.btn-primary:hover {
+  background-color: #14532d;
+  border-color: #14532d;
+}
+
+/* Selector Hijo y Atributo */
+main > section {
+  margin-bottom: 2.5rem;
+}
+
+input[type="text"] {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+input[type="text"]:focus {
+  border-color: var(--vv-secundario);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+/* Pseudoclases */
+.list-group-item:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 576px) {
+  nav.navbar ul.navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #grid-productos {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,30 @@
+// Variables CSS y Sass para VoltioVerde Store
+$color-primario: #166534;
+$color-secundario: #0284c7;
+$color-oscuro: #1e293b;
+$color-fondo: #f8fafc;
+$fuente-principal: 'Plus Jakarta Sans', sans-serif;
+
+// Variables CSS en :root
+:root {
+  --vv-primario: #{$color-primario};
+  --vv-secundario: #{$color-secundario};
+  --vv-oscuro: #{$color-oscuro};
+  --vv-fondo: #{$color-fondo};
+  --vv-sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+// Mixin de centrado flexible
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin de tarjeta responsiva
+@mixin tarjeta-estilo {
+  border-radius: 12px;
+  box-shadow: var(--vv-sombra);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
